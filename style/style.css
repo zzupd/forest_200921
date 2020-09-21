@@ -1,0 +1,397 @@
+@charset "UTF-8";
+@import url("http://zzupd.dothome.co.kr/200528/cssReset/reset.css");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+/* 공통 사항 시작 */
+* {
+    color: #888;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #c9cee4;
+}
+
+div#wrap {
+    width: 1360px;
+    margin: 10px auto;
+}
+
+ul {
+    list-style: none;
+}
+/* 공통 사항 끝 */
+
+
+
+/* 가이드라인 시작 */
+/*div#wrap { border: 1px solid #000; }*/
+
+/*header#header { border: 1px solid #000; }*/
+/*#header div#headTitle { border: 1px solid #000; }*/
+
+/*
+#header div.slideAreaSub { border: 1px solid #000; }
+
+#header div.forestList { border: 1px solid #00f; }
+
+#header #slideShuttleFrame { border: 1px solid #f00; }
+*/
+
+
+/* 가이드라인 끝 */
+
+
+
+/* header#header 시작 */
+header#header {
+
+    padding: 20px 0;
+
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+    background-color: #fff;
+}
+
+#header div#headTitle {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+
+    /* GNB 메뉴 시작 */
+#header nav#gnb {
+    margin-bottom: 20px;
+}
+
+#header li {
+    width: 170px;
+    border: 1px solid #d9d9d9;
+}
+
+#header a {
+    color: #555;
+    width: 100%;
+    height: 46px;
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 46px;
+    text-align: center;
+    display: inline-block;
+
+    outline: none;
+}
+
+#header ul#mainMenu>li {
+    float: left;
+}
+#header ul#mainMenu::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#header ul#mainMenu>li:not(:first-child) {
+    border-left: none;
+}
+
+    /* 최초 상태의 GNB메뉴 첫 번째 li요소의 CSS 적용 시작 */
+#header ul#mainMenu>li:first-child>a {
+    color: #fff;
+    background-color: #16a840;
+}
+#header ul#mainMenu>li:first-child {
+    border-left-color: #16a840;
+    border-right-color: #16a840;
+}
+    /* 최초 상태의 GNB메뉴 첫 번째 li요소의 CSS 적용 끝 */
+
+
+    /* GNB 메뉴 마우스 hover 관련 CSS 적용 시작 */
+#header ul#mainMenu li:hover {
+    border-left-color: #16a840;
+    border-right-color: #16a840;
+}
+#header ul#mainMenu li>a:hover {
+    color: #fff;
+    background-color: #16a840;
+}
+    /* GNB 메뉴 마우스 hover 관련 CSS 적용 끝 */
+
+
+    /* GNB 서브 메뉴 시작 */
+#header ul.subMenu {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+}
+    /* GNB 서브 메뉴 끝 */
+
+    /* GNB 메뉴 끝 */
+
+
+
+    /* slideshow 시작 */
+#header div#slideArea {
+    display: flex;
+}
+#header div.slideAreaSub {
+    height: 320px;
+}
+#header div#prevArrow,
+#header div#nextArrow {
+    width: 80px;
+
+    padding-top: 138px;
+    /* 1. 전체 높이 320, 이미지 높이 44
+        2. 320-44 => 276
+        3. 276 / 2 => 138
+        4. 138을 padding-top에 적용하여 세로 가운데 정렬함
+    */
+
+    position: relative;
+    z-index: 3;
+}
+
+#header div#slideshow {
+    width: 1200px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+#header #slideshow .forestList {
+    width: 300px;
+    height: 290px;
+}
+#header #slideshow>#slideShuttleFrame {
+    width: 1500px;
+    height: 320px;
+
+    display: flex;
+    align-items: center;
+
+    position: absolute;
+}
+#header #slideShuttleFrame table {
+    width: 270px;
+    height: 290px;
+    border: 1px solid #d9d9d9;
+    border-collapse: collapse;
+    margin: 0 auto;
+
+}
+#header #slideShuttleFrame table tr:first-child>td {
+    height: 144px;
+}
+#header #slideShuttleFrame table tr:last-child>td {
+    vertical-align: top;
+    padding: 16px;
+}
+#header #slideShuttleFrame table tr:last-child>td h2 {
+    color: #338c5a;
+    font-size: 18px;
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-bottom: 8px;
+}
+#header #slideShuttleFrame table tr:last-child>td h2 img {
+    vertical-align: middle;
+}
+#header #slideShuttleFrame table tr:last-child>td span {
+    font-size: 13px;
+    font-weight: bold;
+}
+#header #slideShuttleFrame table tr:last-child>td ul {
+    border-top: 1px dotted #d9d9d9;
+    margin-top: 20px;
+}
+#header #slideShuttleFrame table tr:last-child>td li {
+    width: 100%;
+    font-size: 14px;
+    padding-top: 8px;
+    border: none;
+
+    list-style: disc inside;
+}
+    /* slideshow 끝 */
+
+
+
+
+/* header#header 끝 */
+
+
+/* main#main 시작 */
+
+
+main#main {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+    /* #main #bbs 게시판 시작 */
+main#main>div#bbs {
+    width: 890px;
+    height: 350px;
+    padding: 20px;
+    border-radius: 10px;
+
+    background-color: #fff;
+
+}
+
+#main #bbs #bbsHeader {
+    width: 850px;
+    border-bottom: 3px solid #aaa;
+    margin-bottom: 10px;
+
+    display: flex;
+}
+
+#main #bbs #bbsHeader h2 {
+    width: 132px;
+    font-size: 24px;
+    padding-bottom: 16px;
+
+    margin-right: 10px;
+
+    cursor: pointer;
+}
+#main #bbs #bbsHeader span#moreIcon {
+    display: inline-block;
+    margin-left: 530px;
+    cursor: pointer;
+}
+#main #bbs #bbsHeader h2.selected {
+    color: #e13d2b;
+    border-bottom: 4px solid #e13d2b;
+}
+#main #bbs #bbsHeader h2 span {
+    font-size: 26px;
+    color: #aaa;
+}
+
+
+#main #bbsList {
+    height: 250px;
+    /*border: 1px solid #000;*/
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#main #bbsList table {
+    width: 420px;
+    height: 100px;
+    padding-right: 8px;
+    /*border: 1px solid #000;  */
+    border-spacing: 4px;
+    cursor: pointer;
+
+    flex: 1;
+}
+#main #bbsList table .dateDisplay  {
+    width: 90px;
+    height: 90px;
+    text-align: center;
+
+/*    border: 1px solid #000;*/
+    border-radius: 50px;
+    background-color: #eee;
+}
+
+#main #bbsList table tr:first-child td:last-child {
+    width: 320px;
+    /*border: 1px solid #000;*/
+}
+
+#main #bbsList table .dateDisplay span {
+    vertical-align: middle;
+    display: inline-block;
+}
+#main #bbsList table .dateDisplay span:first-child {
+    height: 40px;
+    color: #e13d2b;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 50px;
+}
+#main #bbsList table .dateDisplay span:last-child {
+    height: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+#main #bbsList table td {
+    font-size: 13px;
+    /*border: 1px solid #000;*/
+}
+
+#main #bbsList table td h2 {
+    color: #000;
+    font-size: 17px;
+    font-weight: bold;
+}
+    /* #main #bbs 게시판 끝 */
+
+
+
+    /* #main #signBoard 알림판 시작 */
+
+main#main>div#signBoard {
+    width: 460px;
+    height: 350px;
+    padding: 16px 40px;
+    border-radius: 10px;
+
+    background-color: #fff;
+}
+
+#main div#signBoardHeader {
+    height: 60px;
+    display: flex;
+}
+#main #signBoardHeader h2 {
+    width: 240px;
+    color: #000;
+    font-size: 27px;
+    text-align: left;
+/*    border: 1px solid #000;*/
+}
+#main #signBoardHeader div#ctrlBtn {
+    width: 180px;
+    text-align: right;
+    /*border: 1px solid #000;*/
+}
+
+#main #signBoardHeader #ctrlBtn img {
+    height: 25px;
+    margin: 4px;
+}
+
+#main #signBoardContent img {
+    width: 380px;
+}
+    /* #main #signBoard 알림판 끝 */
+
+
+/* main#main 끝 */
+
+
+
+
+
+
+
+
+
+
+
+
+
